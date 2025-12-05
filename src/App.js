@@ -1,6 +1,10 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { Menu, X, Trophy, Gamepad2, Mail, ChevronRight } from 'lucide-react';
 import emailjs from '@emailjs/browser';
+import MemoryGame from './MemoryGame';
+import PixelRunnerGame from './PixelRunnerGame'
+import SpaceInvadersGame from './SpaceInvadersGame'
+
 
 // Navigation Component
 const Navigation = () => {
@@ -131,19 +135,19 @@ const GameCards = () => {
       title: 'Memory Matrix',
       description: 'Test your memory with this cyberpunk-themed matching game.',
       color: 'from-blue-500 to-cyan-600',
-      link: '#games'
+      link: '#memory'
     },
     {
       title: 'Pixel Runner',
       description: 'Run, jump, and dodge obstacles in this endless retro adventure.',
       color: 'from-orange-500 to-red-600',
-      link: '#games'
+      link: '#pixelrunner'
     },
     {
       title: 'Space Invaders',
       description: 'Defend Earth from waves of alien invaders in this classic remake.',
       color: 'from-purple-500 to-pink-600',
-      link: '#games'
+      link: '#spaceinvaders'
     }
   ];
 
@@ -639,6 +643,9 @@ export default function App() {
       <Hero />
       <GameCards />
       <SnakeGame />
+      <MemoryGame/>
+      <PixelRunnerGame/>
+      <SpaceInvadersGame/>
       <Leaderboard />
       <About />
       <Contact />
